@@ -15,8 +15,31 @@ h1 {
   text-align: center;
 }
 
-.chart-container {
+.container {
   margin: 24px auto;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card .title {
+  padding: 24px;
+}
+
+.card .content {
+  padding: 0px 24px 24px;
+  display: none;
+}
+
+.card.expanded .content {
+  display: block;
 }

@@ -1,4 +1,6 @@
 $(() => {
+  bindCardEvent();
+
   const data = {
     labels: ['Taste', 'Location', 'Service', 'Price', 'Ambiance'],
     datasets: [
@@ -36,3 +38,9 @@ $(() => {
 
   new Chart(document.getElementById('chart'), config);
 });
+
+function bindCardEvent() {
+  $('.card').on('click', function () {
+    $(this).find('.content').slideToggle(200);
+  });
+}
