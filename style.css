@@ -18,11 +18,11 @@ h1 {
 .container {
   margin: 24px auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .chart {
-  max-height: 400px;
+  max-height: 500px;
 }
 
 .card {
@@ -31,17 +31,49 @@ h1 {
   border-radius: 20px;
   box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
   transition: 0.2s ease-in-out;
-  cursor: pointer;
   user-select: none;
 }
 
 .card .title {
+  min-height: 70px;
+  position: relative;
   padding: 24px;
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card .title:hover .compare {
+  display: block;
+  cursor: pointer;
+}
+
+.card .title .compare {
+  display: none;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.card .title .compare:hover {
+  background: black;
+  color: white;
+}
+
+.card .title .name {
+  position: absolute;
+  left: 24px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.card .title:hover .name {
+  left: 95px;
 }
 
 .card .title .score {
+  position: absolute;
+  top: 26px;
+  right: 24px;
   font-size: 14px;
   color: gray;
 }
