@@ -19,10 +19,14 @@ h1 {
   margin: 24px auto;
   width: 100%;
   max-width: 400px;
+}
+
+.chart {
   max-height: 400px;
 }
 
 .card {
+  margin-bottom: 24px;
   background: white;
   border-radius: 20px;
   box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
@@ -33,11 +37,25 @@ h1 {
 
 .card .title {
   padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .title .score {
+  font-size: 14px;
+  color: gray;
 }
 
 .card .content {
   padding: 0px 24px 24px;
   display: none;
+}
+
+.card .content p {
+  font-size: 14px;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card.expanded .content {

@@ -1,4 +1,4 @@
-const data = [
+export const restaurantData = [
   {
     id: 1,
     name: 'Khao Kha Moo',
